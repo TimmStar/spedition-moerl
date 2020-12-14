@@ -10,7 +10,7 @@ def index(request):
 
 def bestellung(request):
     if request.method =="GET":
-        template = 'spedition/bestellung.html'
+        template = 'app1/bestellung.html'
         kundends = Kunde.objects.all()
         return render(request,template,{'kunden':kundends})
     else:
@@ -18,7 +18,7 @@ def bestellung(request):
         if button == "cancel":
             return redirect("/")
         elif button == "new":
-            template = 'spedition/bestellung.html'
+            template = 'app1/bestellung.html'
             kundends = Kunde.objects.all()
             return render(request,template,{'kunden':kundends})           
         else:
@@ -26,5 +26,5 @@ def bestellung(request):
             kunde = Kunde.objects.get(id=(request.POST['kunde']))
             ds = Bestellung(bestellung=bestellungen,kunde=kunde)
             ds.save()
-            template = 'spedition/erfolgreich.html'
+            template = 'app1/erfolgreich.html'
             return render(request,template,{})
