@@ -1,0 +1,21 @@
+body{
+    background-color: brown;
+}
+
+h1 {
+    color:black
+    
+}
+
+.bunt{
+    background-color: rgb(206, 138, 99);
+}
+
+h2{
+    color: rgb(250, 244, 249)
+}
+
+a {
+    color: rgb(26, 25, 36);
+    font-size: 1em;
+}
